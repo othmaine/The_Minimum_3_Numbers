@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class The3MinimumNumbers 
+{
+    public static void main(String[] args) 
+    {
+        Scanner x =new Scanner (System.in);
+        byte length;
+        byte number;
+        
+        System.out.print("How many numbers will you insert?(4 at least)\n");
+        do
+        {
+            length =x.nextByte();
+        }
+        while(length<=3);
+        
+        System.out.print("Enter number 1:");
+        byte minimum1 =x.nextByte();
+        System.out.print("Enter number 2:");
+        byte minimum2=x.nextByte();
+        System.out.print("Enter number 3:");
+        byte minimum3=x.nextByte();
+        for(byte counter=0; counter<(length-3);counter++)
+        {
+            System.out.print("Enter number "+(counter +4)+":");
+            number =x.nextByte();
+            if(number<minimum1)
+            {
+                minimum1 = number;
+            }
+            else if(number<minimum2)
+         
+            {
+                minimum2= number;
+            }
+            else if(number<minimum3)
+            {
+                minimum3=number;
+            }
+        }
+        System.out.print("The minimum three numbers are:"+minimum1+','+minimum2+','+minimum3);
+    }
+    
+}
